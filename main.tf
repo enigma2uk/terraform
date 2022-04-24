@@ -6,10 +6,10 @@ resource "cloudflare_zone" "uk_enigma2" {
 
 # Build Server
 
-resource "cloudflare_record" "uk_enigma2_build" {
+resource "cloudflare_record" "uk_enigma2_dev_build" {
   zone_id = cloudflare_zone.uk_enigma2.id
-  name    = "build"
-  value   = "1.2.3.4"
+  name    = "build.dev"
+  value   = "194.147.58.99"
   type    = "A"
   ttl     = 60
 }
